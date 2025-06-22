@@ -53,15 +53,15 @@ sp_tokens = sp_tokenizer.tokenize(sentence)
 sp_token_ids = sp_tokenizer.convert_tokens_to_ids(sp_tokens)
 print("Tokens:", sp_tokens)
 print("Token IDs:", sp_token_ids)
-Tokens: ['▁The', '▁cat', '▁sat', '▁on', '▁the', '▁mat', '▁because', '▁it', '▁was', '▁tired', '.']
-Token IDs: [51, 1731, 434, 19, 8, 1141, 272, 38, 40, 6718, 3]
+Tokens: ['▁The', '▁cat', '▁', 's', 'at', '▁on', '▁the', '▁mat', '▁because', '▁it', '▁was', '▁tired', '.']
+Token IDs: [51, 1731, 3, 10, 19, 8, 1141, 272, 38, 40, 6718, 3]
 
 
 | Tokenizer              | Tokens                 | Token Count |
 | ---------------------- | ---------------------- | ----------- |
 | **GPT-2 (BPE)**        | \['The', 'Ġcat', ...]  | 11          |
 | **BERT (WordPiece)**   | \['the', 'cat', ...]   | 11          |
-| **T5 (SentencePiece)** | \['▁The', '▁cat', ...] | 11          |
+| **T5 (SentencePiece)** | \['▁The', '▁cat', ...] | 13          |
 
 ![Tokenization Comparison](tokenization_comparison.png)
 
